@@ -13,7 +13,7 @@
 1. node checkout
 
 ### In two browser tabs, visit:
-- http://33.33.33.15/checkout/
-- http://33.33.33.15/appv2/
+- http://33.33.33.15:9090/checkout
+- http://33.33.33.15:9000/appv2
 
 Type something into the checkout form and watch the appv2 console.
