@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Page Title</title>
+</head>
+<body id="" onload="">
+  <h1>Checkout</h1>
+  <div>
+    <input
+      type="text"
+      name="chat"
+      value="chat"
+      id="chat" />
+    <button id="submit">Submit</button>
+  </div>
+
+
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    var socket = io({
+      path: '/checkout/socket.io',
+    });
+
+    $('#submit').on('click', function () {
+      socket.emit('chat message', $('#chat').val());
+      $('#chat').val('');
+      return false;
+    });
+  </script>
+</body>
+</html>
